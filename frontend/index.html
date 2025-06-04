@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Interview Practice</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="container" role="main" aria-label="AI Interview Practice Application">
+    <h1>AI Interview Practice</h1>
+
+    <section class="input-section">
+      <!-- <label for="languageSelect">Choose Language:</label> -->
+      <select id="languageSelect" aria-describedby="languageSelectHelp">
+        <option value="Choose Language">Select Language</option>
+        <option value="javascript">JavaScript</option>
+        <option value="python">Python</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="sql">SQL</option>
+      </select>
+      <small id="languageSelectHelp" class="sr-only">Select a programming language for the interview questions</small>
+
+      <button id="startInterview" class="primary-btn">Start Interview</button>
+    </section>
+
+    <section id="questionSection" class="card">
+      <h2>Question</h2>
+      <p id="question" tabindex="0" aria-live="polite"></p>
+    </section>
+
+    <section id="answerSection" hidden>
+      <label for="answerInput">Your Answer:</label>
+      <textarea id="answerInput" placeholder="Type your answer here..." rows="6" aria-required="true"></textarea>
+      
+      <div class="button-group">
+        <button id="submitAnswer" class="primary-btn">Submit</button>
+        <button id="speakAnswer" class="secondary-btn" title="Speak your answer">🎤 Speak</button>
+      </div>
+    </section>
+
+    <section id="feedbackSection" class="card" hidden aria-live="assertive" aria-atomic="true"></section>
+
+    <section class="button-group" id="nextQuestionSection" hidden>
+      <button id="nextQuestion" class="primary-btn">Next Question</button>
+    </section>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
