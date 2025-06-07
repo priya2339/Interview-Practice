@@ -17,13 +17,6 @@ app.use(express.json());
 app.use('/backend/interview', interviewRoutes);
 
 
-app.use(express.static(path.join(__dirname, "../frontend")));
-
-app.get("/", (req, res) => {
-    res.sendFile(path.join(__dirname, "../frontend/index.html"));
-});
-
-
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
