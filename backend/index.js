@@ -14,7 +14,7 @@ mongoose.connect(process.env.MONGO_URI)
 app.use(cors());
 app.use(express.json());
 
-app.use('/backend/interview', interviewRoutes);
+app.use('/api', interviewRoutes);
 
 
 app.use((req, res) => {
@@ -24,6 +24,11 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).json({ error: "Internal Server Error" });
+});
+
+
+app.get("/", (req, res) => {
+  res.status(200).send('Hello from the server.')
 });
 
 app.listen(PORT, () => {
