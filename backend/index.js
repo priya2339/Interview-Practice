@@ -59,7 +59,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch((err) => console.error("MongoDB connection error:", err.message));
 
 // Middleware
-app.use(cors());
+app.use(cors(['https://interview-practice-93t7.vercel.app/api/interview']));
 app.use(express.json());
 
 // Main API route
