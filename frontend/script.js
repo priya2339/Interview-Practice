@@ -27,7 +27,7 @@ document.getElementById('submitAnswer').addEventListener('click', async () => {
     return;
   }
 
-  const response = await fetch('http://localhost:3000/api/answer', {
+  const response = await fetch('https://interview-practice-flame.vercel.app/api/answer', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ question, userAnswer, language: selectedLanguage }),
@@ -53,7 +53,7 @@ nextQuestionBtn.addEventListener('click', async () => {
 });
 
 async function fetchAndDisplayQuestion() {
-  const response = await fetch('http://localhost:3000/api/ask', {
+  const response = await fetch('https://interview-practice-flame.vercel.app/api/ask', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ language: selectedLanguage, index: currentQuestionIndex }),
