@@ -62,7 +62,7 @@ async function fetchAndDisplayQuestion() {
   const data = await response.json();
 
   if (data.done) {
-    questionEl.innerText = "🎉 Interview Complete!";
+    questionEl.innerText = "Interview Complete!";
     answerSection.style.display = 'none';
     nextQuestionBtn.style.display = 'none';
     return;
