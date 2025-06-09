@@ -185,7 +185,7 @@ document.getElementById('submitAnswer').addEventListener('click', async () => {
     return;
   }
 
-  const response = await fetch('http://localhost:3000/api/interview/answer', {
+  const response = await fetch('https://interview-practice-93t7.vercel.app/api/interview/answer', {  
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ question, userAnswer, language: selectedLanguage }),
@@ -215,7 +215,7 @@ languageSelect.addEventListener('change', () => {
 });
 
 async function fetchAndDisplayQuestion() {
-  const response = await fetch('http://localhost:3000/api/interview/ask', {
+  const response = await fetch('https://interview-practice-93t7.vercel.app/api/interview/ask', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ language: selectedLanguage, index: currentQuestionIndex }),
